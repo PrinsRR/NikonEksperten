@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NikonEksperten", "NikonEksperten\NikonEksperten.csproj", "{99C271EF-3E1F-46F1-A475-F2779E6B8996}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NikonRepo", "NikonRepo\NikonRepo.csproj", "{C01ADDDF-2EAA-43BD-B2ED-2A7806FC01C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NikonRepo", "NikonRepo\NikonRepo.csproj", "{AC927497-1052-417E-B6AA-B898B9F2A616}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{99C271EF-3E1F-46F1-A475-F2779E6B8996}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99C271EF-3E1F-46F1-A475-F2779E6B8996}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99C271EF-3E1F-46F1-A475-F2779E6B8996}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C01ADDDF-2EAA-43BD-B2ED-2A7806FC01C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C01ADDDF-2EAA-43BD-B2ED-2A7806FC01C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C01ADDDF-2EAA-43BD-B2ED-2A7806FC01C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C01ADDDF-2EAA-43BD-B2ED-2A7806FC01C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC927497-1052-417E-B6AA-B898B9F2A616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC927497-1052-417E-B6AA-B898B9F2A616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC927497-1052-417E-B6AA-B898B9F2A616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC927497-1052-417E-B6AA-B898B9F2A616}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
