@@ -2,26 +2,81 @@
 
 <html>
 <head>
-    <link href="~/content/styles/GeneralStyles.css" rel="stylesheet" />
+
+    <script src="~/content/scripts/jquery-2.1.4.min.js"></script>
+
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
-    <!-- Compressed CSS -->
-    <script src="https://cdn.jsdelivr.net/foundation/6.0.5/foundation.min.css"></script>
+    <!-- foundation -->
+    <link href="~/content/Foundation/foundation.min.css" rel="stylesheet" />
+    <link href="~/content/Foundation/foundation.css" rel="stylesheet" />
+    <link href="~/content/Foundation/app.css" rel="stylesheet" />
+    <!-- css -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href="~/content/styles/GeneralStyles.css" rel="stylesheet" />
 
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/foundation/6.0.5/foundation.min.js"></script>
+    <!-- font awesome -->
+    <link href="~/content/FontAwesome/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/content/FontAwesome/font-awesome.css" rel="stylesheet"/>
+
 </head>
 <body>
 
-    <div class="row">
-        <div class="large-12 columns">
-
-            <img src="~/content/Images/Blandet/Layoutheader.jpg" />
+    <div class="row collapse">
+        <div class="large-12 medium-12 columns hide-for-small-only headerBIG">
+            <header>
+                <img src="~/content/Images/Blandet/Layoutheader.jpg" width="100%" height="auto" />
+            </header>
+        </div>
+        <div class="large-12 medium-12 columns show-for-small-only headerSMALL">
+            <header>
+                <img src="~/content/Images/Blandet/Layoutheader.jpg" width="100%" height="auto" />
+            </header>
         </div>
     </div>
-<div>
-    @RenderBody()
+<div class="row collapse">
+
+    <div class="large-12 medium-12 columns hide-for-small-only ">
+
+        <nav>
+            <div class="OrangeBorders">
+                <ul>
+                    <li><a>Hjem</a></li>
+                    <li><a>Produkter</a></li>
+                    <li><a>Om os</a></li>
+                    <li><a>Kontakt</a></li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+
+    <div class="small-12 columns show-for-small-only ">
+        <nav>
+
+        </nav>
+    </div>
+
 </div>
+    <div class="row collapse content">
+        @RenderBody()
+    </div>
+    <div class="row collapse">
+        <div class="large-12 columns text-center">
+
+
+            <footer>
+                <div class="OrangeBorders text-left">
+                    <span class="copyright">Copyright 2014 by NIKON experten</span>
+                </div>
+            </footer>
+<div class="afterfooter"></div>
+        </div>
+    </div>
+
 </body>
 </html>
