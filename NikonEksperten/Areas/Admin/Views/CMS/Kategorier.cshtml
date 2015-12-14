@@ -10,11 +10,13 @@
 <h2>Kategorier</h2>
 
 
+               <table>
+                   @foreach (Kategori kat in Model)
+                   {
 
-@foreach (Kategori kat in Model)
-{
-  
-}
+                       <tr><td>@kat.ID</td><td>@kat.KategoriNavn</td><td>@kat.Tekst</td><td>@kat.Billede</td></tr>
 
+                   }
 
+               </table>
 
