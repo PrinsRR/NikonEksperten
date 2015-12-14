@@ -1,0 +1,1 @@
+﻿// General scripts shared on both admin and main
