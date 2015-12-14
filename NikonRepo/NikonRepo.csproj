@@ -45,22 +45,15 @@
     <Compile Include="Duser\Conn.cs" />
     <Compile Include="Duser\Mapper.cs" />
     <Compile Include="Duser\PasswordProtector.cs" />
-    <Compile Include="Factories\BrugerFac.cs" />
-    <Compile Include="Factories\IndholdFac.cs" />
-    <Compile Include="Factories\KategoriFac.cs" />
-    <Compile Include="Factories\KontaktFac.cs" />
-    <Compile Include="Factories\KundeFac.cs" />
-    <Compile Include="Factories\KundeLoginFac.cs" />
-    <Compile Include="Factories\LevelFac.cs" />
-    <Compile Include="Factories\OrdreFac.cs" />
-    <Compile Include="Factories\OrdreLinieFac.cs" />
-    <Compile Include="Factories\ProduktFac.cs" />
     <Compile Include="Models\BaseModels\Produkter.cs" />
     <Compile Include="Models\BaseModels\Omos.cs" />
     <Compile Include="Models\BaseModels\Kontakt.cs" />
     <Compile Include="Models\BaseModels\Kategori.cs" />
-    <Compile Include="Models\ViewModels\ProduktListe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factories\" />
+    <Folder Include="Models\ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

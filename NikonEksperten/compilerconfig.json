@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "content/styles/AdminStyles.css",
+    "inputFile": "content/styles/AdminStyles.scss"
+  },
+  {
+    "outputFile": "content/styles/GeneralStyles.css",
+    "inputFile": "content/styles/GeneralStyles.scss"
+  },
+  {
+    "outputFile": "content/styles/MainStyles.css",
+    "inputFile": "content/styles/MainStyles.scss"
+  }
+]

@@ -89,12 +89,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\StyleSheet1.css" />
+    <Content Include="content\Images\Blandet\Layoutheader.jpg" />
+    <Content Include="content\scripts\jquery-2.1.4.min.js" />
+    <Content Include="content\scripts\JScripts.js" />
+    <Content Include="content\styles\AdminStyles.css">
+      <DependentUpon>AdminStyles.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\GeneralStyles.css">
+      <DependentUpon>GeneralStyles.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\GeneralStyles.min.css">
+      <DependentUpon>GeneralStyles.css</DependentUpon>
+    </Content>
+    <Content Include="content\styles\MainStyles.css">
+      <DependentUpon>MainStyles.scss</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\CMSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -106,6 +122,18 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="packages.config" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CMS\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="content\styles\AdminStyles.scss" />
+    <Content Include="content\styles\GeneralStyles.scss" />
+    <Content Include="content\styles\MainStyles.scss" />
+    <None Include="compilerconfig.json" />
+    <Content Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -115,10 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\" />
+    <Folder Include="content\Images\KategoriBilleder\" />
+    <Folder Include="content\Images\ProduktBilleder\" />
+    <Folder Include="content\Images\SliderBilleder\" />
     <Folder Include="Helpers\" />
-    <Folder Include="Views\Home\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NikonRepo\NikonRepo.csproj">
