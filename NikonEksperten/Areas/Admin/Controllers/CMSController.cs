@@ -13,5 +13,11 @@ namespace NikonEksperten.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public ActionResult Kategorier()
+        {
+            return View();
+
+        }
     }
 }

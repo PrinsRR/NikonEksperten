@@ -24,13 +24,25 @@
 <body>
 
     <div class="row collapse">
+        <div class="large-12 medium-12 columns hide-for-small-only headerBIG">
+            <header>
+                <img src="~/content/Images/Blandet/Layoutheader.jpg" width="100%" height="auto" />
+            </header>
+        </div>
+        <div class="large-12 medium-12 columns show-for-small-only headerSMALL">
+            <header>
+                <img src="~/content/Images/Blandet/Layoutheader.jpg" width="100%" height="auto" />
+            </header>
+        </div>
+    </div>
+    <div class="row collapse">
 
         <div class="large-12 medium-12 columns hide-for-small-only ">
 
             <nav>
                 <div class="OrangeBorders">
                     <ul>
-                        <li><a>Hjem</a></li>
+                        <li><a>Kategori</a></li>
                         <li><a>Produkter</a></li>
                         <li><a>Om os</a></li>
                         <li><a>Kontakt</a></li>
@@ -50,10 +62,23 @@
         </div>
 
     </div>
+    <div class="row collapse content">
+        @RenderBody()
+    </div>
+    <div class="row collapse">
+        <div class="large-12 columns text-center">
 
-<div>
-    @RenderBody()
-</div>
+
+            <footer>
+                <div class="OrangeBorders text-left">
+                    <span class="copyright">Copyright 2014 by NIKON experten</span>
+                </div>
+            </footer>
+            <div class="afterfooter"></div>
+        </div>
+    </div>
+
+
 
 </body>
 </html>
