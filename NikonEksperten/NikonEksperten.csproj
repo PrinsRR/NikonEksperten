@@ -89,6 +89,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
+    <Content Include="bin\System.Web.Webpages.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.dll" />
     <Content Include="content\FontAwesome\font-awesome.css" />
     <Content Include="content\FontAwesome\font-awesome.min.css" />
     <Content Include="content\Foundation\app.css" />
@@ -97,18 +106,12 @@
     <Content Include="content\Images\Blandet\Layoutheader.jpg" />
     <Content Include="content\scripts\jquery-2.1.4.min.js" />
     <Content Include="content\scripts\JScripts.js" />
-    <Content Include="content\styles\AdminStyles.css">
-      <DependentUpon>AdminStyles.scss</DependentUpon>
-    </Content>
-    <Content Include="content\styles\GeneralStyles.css">
-      <DependentUpon>GeneralStyles.scss</DependentUpon>
-    </Content>
-    <Content Include="content\styles\GeneralStyles.min.css">
-      <DependentUpon>GeneralStyles.css</DependentUpon>
-    </Content>
-    <Content Include="content\styles\MainStyles.css">
-      <DependentUpon>MainStyles.scss</DependentUpon>
-    </Content>
+    <Content Include="content\scripts\Slidescript.js" />
+    <Content Include="content\styles\AdminStyles.css" />
+    <Content Include="content\styles\GeneralStyles.css" />
+    <Content Include="content\styles\GeneralStyles.min.css" />
+    <Content Include="content\styles\MainStyles.css" />
+    <Content Include="content\styles\SlideStyles.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -120,6 +123,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Uploader.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -127,19 +134,19 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="packages.config" />
-    <Content Include="Views\Shared\_MainLayout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\CMS\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="content\Foundation\foundation.css.map" />
     <Content Include="content\styles\AdminStyles.scss" />
     <Content Include="content\styles\GeneralStyles.scss" />
     <Content Include="content\styles\MainStyles.scss" />
-    <None Include="compilerconfig.json" />
-    <Content Include="compilerconfig.json.defaults">
-      <DependentUpon>compilerconfig.json</DependentUpon>
-    </Content>
-    <Content Include="content\Foundation\foundation.css.map" />
+    <Content Include="obj\Debug\build.force" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="compilerconfig.json" />
+    <Content Include="compilerconfig.json.defaults" />
+    <Content Include="Areas\Admin\Views\CMS\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,10 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="content\Images\KategoriBilleder\" />
-    <Folder Include="content\Images\ProduktBilleder\" />
-    <Folder Include="content\Images\SliderBilleder\" />
-    <Folder Include="Helpers\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NikonRepo\NikonRepo.csproj">
