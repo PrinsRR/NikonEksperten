@@ -97,6 +97,7 @@
     <Content Include="content\Images\Blandet\Layoutheader.jpg" />
     <Content Include="content\scripts\jquery-2.1.4.min.js" />
     <Content Include="content\scripts\JScripts.js" />
+    <Content Include="content\scripts\Slidescript.js" />
     <Content Include="content\styles\AdminStyles.css">
       <DependentUpon>AdminStyles.scss</DependentUpon>
     </Content>
@@ -109,6 +110,7 @@
     <Content Include="content\styles\MainStyles.css">
       <DependentUpon>MainStyles.scss</DependentUpon>
     </Content>
+    <Content Include="content\styles\SlideStyles.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -135,6 +137,7 @@
     <Content Include="content\styles\AdminStyles.scss" />
     <Content Include="content\styles\GeneralStyles.scss" />
     <Content Include="content\styles\MainStyles.scss" />
+    <Content Include="Areas\Admin\Views\CMS\Kategorier.cshtml" />
     <None Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
