@@ -4,8 +4,7 @@
 .SliderContainer {
     height: 300px;
     overflow: hidden;
-    border: 1px solid lightgrey;
-    width: 1000px;
+    width: 100%;
     }
 .cutter {
     height: 100%;
@@ -87,10 +86,8 @@
     display: inline-block;
         position: relative;
     margin-right: -4px;
-    -webkit-background-size:cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-position: center !important;
+    background-size: 100% !important;
     height: 300px;
     }
 
