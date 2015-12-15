@@ -117,6 +117,13 @@
     <Content Include="content\Foundation\foundation.css" />
     <Content Include="content\Foundation\foundation.min.css" />
     <Content Include="content\Images\Blandet\Layoutheader.jpg" />
+    <Content Include="content\Images\KategoriBilleder\afs_dx_18_140.jpg" />
+    <Content Include="content\Images\KategoriBilleder\nikon_d300_1.jpg" />
+    <Content Include="content\Images\KategoriBilleder\untitled.png" />
+    <Content Include="content\Images\KategoriBilleder\untitled3.png" />
+    <Content Include="content\Images\SliderBilleder\Banner01.jpg" />
+    <Content Include="content\Images\SliderBilleder\Banner02.jpg" />
+    <Content Include="content\Images\SliderBilleder\Banner03.jpg" />
     <Content Include="content\scripts\jquery-2.1.4.min.js" />
     <Content Include="content\scripts\JScripts.js" />
     <Content Include="content\scripts\Slidescript.js" />
@@ -131,6 +138,9 @@
     </Content>
     <Content Include="content\styles\MainStyles.css">
       <DependentUpon>MainStyles.scss</DependentUpon>
+    </Content>
+    <Content Include="content\styles\MainStyles.min.css">
+      <DependentUpon>MainStyles.css</DependentUpon>
     </Content>
     <Content Include="content\styles\SlideStyles.css" />
     <Content Include="Global.asax" />
@@ -178,6 +188,7 @@
     <Content Include="content\Foundation\foundation.css.map" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\NikonEksperten.csprojResolveAssemblyReference.cache" />
+    <Content Include="Views\Shared\Slider.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -187,9 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="content\Images\KategoriBilleder\" />
     <Folder Include="content\Images\ProduktBilleder\" />
-    <Folder Include="content\Images\SliderBilleder\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
