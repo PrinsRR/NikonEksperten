@@ -1,0 +1,22 @@
+﻿@model NikonRepo.Kategori
+
+@{
+    ViewBag.Title = "Rediger";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Rediger</h2>
+
+<form action="/Admin/CMS/Rediger" enctype="multipart/form-data" method="POST">
+
+    <input id="ID" name="ID" type="hidden" value="@Model.ID"/>
+    <input id="Navn" name="KategoriNavn" type="text" value="@Model.KategoriNavn" placeholder="Kategori navn"/>
+    <input id="Tekst" name="Tekst" type="text" value="@Model.Tekst" placeholder="Tekst"/>
+    <input id="File1" type="file" name="billede" />
+    <input name="oldpic" type="hidden" value="@Model.Billede"/>
+    <input id="Submit1" type="submit" value="submit" />
+
+</form>
+
+
+

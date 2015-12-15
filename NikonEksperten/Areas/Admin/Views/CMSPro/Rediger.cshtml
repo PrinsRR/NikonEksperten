@@ -1,0 +1,33 @@
+﻿@using NikonRepo
+@model NikonRepo.Produkter
+
+@{
+    ViewBag.Title = "Rediger";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Rediger</h2>
+
+<form action="/Admin/CMSPro/Rediger/" method="POST" enctype="multipart/form-data">
+    <select name="KategoriID">
+        @foreach (Kategori kat in Model)
+        {
+        <option value="@kat.ID">@kat.KategoriNavn</option>
+        }
+
+    </select>
+
+    <input id="Text1" type="text" name="Overskrift" placeholder="Overskrift" value="@Model.Overskrift"/>
+    <input id="Text1" type="text" name="Navn" placeholder="Navn" value="@Model.Navn"/>
+    <input id="Text1" type="text" name="Varenummer" placeholder="Varenummer" value="@Model.Varenummer"/>
+    <input id="Text1" type="text" name="Pris" placeholder="Pris" value="@Model.Pris"/>
+    <input id="Text1" type="text" name="Tilbudspris" placeholder="Tilbudspris" value="@Model.Tilbudspris"/>
+    <input id="Text1" type="text" name="Leveringstid" placeholder="Leveringstid" value="@Model.Leveringstid"/>
+    <input id="Text1" type="text" name="Lagerantal" placeholder="Lagerantal" value="@Model.Lagerantal"/>
+    <input id="Text1" type="file" name="pic"/>
+    <input type="hidden" value="@Model.Billede" name="Billede"/>
+    <input id="Text1" type="text" name="Beskrivelse" placeholder="Beskrivelse" value="@Model.Beskrivelse"/>
+    <input id="Text1" type="text" name="Producent" placeholder="Producent" value="@Model.Producent"/>
+    <input id="Submit1" type="submit" value="submit" />
+</form>
+

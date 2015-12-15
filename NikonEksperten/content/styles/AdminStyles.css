@@ -21,3 +21,7 @@ nav ul li a { display: inline-block;padding-left: 25px;padding-right: 32px;line-
     background-color: white;
     min-height: 400px;
 }
+
+i { color: black;
+
+}

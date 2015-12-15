@@ -1,0 +1,19 @@
+﻿@model NikonRepo.Kategori
+
+@{
+    ViewBag.Title = "AddKat";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AddKat</h2>
+
+<form action="/Admin/CMS/Addkat/" enctype="multipart/form-data" method="POST">
+
+
+    <input id="Navn" name="KategoriNavn" type="text"  placeholder="Kategori navn"/>
+    <input id="Tekst" name="Tekst" type="text" placeholder="Tekst"/>
+    <input id="File1" type="file" name="billede" />
+    
+    <input id="Submit1" type="submit" value="submit" />
+
+</form>

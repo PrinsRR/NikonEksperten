@@ -1,0 +1,31 @@
+﻿@using NikonRepo
+@model List<NikonRepo.Kategori>
+
+@{
+    ViewBag.Title = "Addpro";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Addpro</h2>
+
+<form action="/Admin/CMSPro/Addpro/" method="POST" enctype="multipart/form-data">
+    <select name="KategoriID">
+        @foreach (Kategori kat in Model)
+        {
+        <option value="@kat.ID">@kat.KategoriNavn</option>
+        }
+      
+    </select>
+    
+    <input id="Text1" type="text" name="Overskrift" placeholder="Overskrift"/>
+    <input id="Text1" type="text" name="Navn" placeholder="Navn"/>
+    <input id="Text1" type="text" name="Varenummer" placeholder="Varenummer"/>
+    <input id="Text1" type="text" name="Pris" placeholder="Pris"/>
+    <input id="Text1" type="text" name="Tilbudspris" placeholder="Tilbudspris"/>
+    <input id="Text1" type="text" name="Leveringstid" placeholder="Leveringstid"/>
+    <input id="Text1" type="text" name="Lagerantal" placeholder="Lagerantal"/>
+    <input id="Text1" type="file" name="pic"/>
+    <input id="Text1" type="text" name="Beskrivelse" placeholder="Beskrivelse"/>
+    <input id="Text1" type="text" name="Producent" placeholder="Producent"/>
+    <input id="Submit1" type="submit" value="submit"/>
+</form>

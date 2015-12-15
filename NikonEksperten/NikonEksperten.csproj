@@ -118,10 +118,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CMSController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CMSProController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Uploader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +140,11 @@
     <Content Include="content\styles\GeneralStyles.scss" />
     <Content Include="content\styles\MainStyles.scss" />
     <Content Include="Areas\Admin\Views\CMS\Kategorier.cshtml" />
+    <Content Include="Areas\Admin\Views\CMS\Rediger.cshtml" />
+    <Content Include="Areas\Admin\Views\CMS\AddKat.cshtml" />
+    <Content Include="Areas\Admin\Views\CMSPro\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CMSPro\Addpro.cshtml" />
+    <Content Include="Areas\Admin\Views\CMSPro\Rediger.cshtml" />
     <None Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -155,7 +162,6 @@
     <Folder Include="content\Images\KategoriBilleder\" />
     <Folder Include="content\Images\ProduktBilleder\" />
     <Folder Include="content\Images\SliderBilleder\" />
-    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NikonRepo\NikonRepo.csproj">

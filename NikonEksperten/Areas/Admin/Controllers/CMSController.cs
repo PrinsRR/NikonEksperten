@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NikonRepo;
 using NikonRepo.Factories;
 
 namespace NikonEksperten.Areas.Admin.Controllers
@@ -13,6 +14,7 @@ namespace NikonEksperten.Areas.Admin.Controllers
         facKontakt facKon = new facKontakt();
         facOmos facOm = new facOmos();
         facProdukter facPro = new facProdukter();
+        Uploader UP = new Uploader();
         // GET: Admin/CMS
         public ActionResult Index()
         {
@@ -24,6 +26,66 @@ namespace NikonEksperten.Areas.Admin.Controllers
 
             return View(facKat.GetAll());
 
+        }
+
+        public ActionResult Rediger(int id)
+        {
+          
+            return View(  facKat.Get(id));
+        }
+
+        [HttpPost]
+        public ActionResult Rediger(HttpPostedFileBase billede, Kategori k, string oldpic)
+        {
+       
+
+            if (billede != null)
+            {
+                string path = Request.PhysicalApplicationPath + "Content/Images/";
+            string file = UP.UploadImage(billede, path, 400, true);
+                k.Billede = billede.FileName;
+            }
+            else
+            {
+                k.Billede = oldpic;
+            }
+
+            facKat.Update(k);
+            return RedirectToAction("Kategorier");
+
+        }
+        
+        public ActionResult AddKat()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Addkat(Kategori k, HttpPostedFileBase billede)
+        {
+            if (ModelState.IsValid)
+                
+
+            {
+                string path = Request.PhysicalApplicationPath + "Content/Images/";
+                string file = UP.UploadImage(billede, path, 400, true);
+                k.Billede = billede.FileName;
+                facKat.Insert(k);
+            }
+            else
+            {
+                
+            }
+           
+            return RedirectToAction("Kategorier");
+        }
+
+
+
+        public ActionResult Delete(int id)
+        {
+            facKat.Delete(id);
+            return RedirectToAction("Kategorier");
         }
     }
 }
