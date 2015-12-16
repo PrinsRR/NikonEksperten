@@ -1,0 +1,41 @@
+﻿@using NikonRepo
+@model List<NikonRepo.Produkter>
+
+@{
+    ViewBag.Title = "SoegeResultater";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>SoegeResultater</h2>
+<div class="row">
+    @foreach (Produkter prod in @Model)
+    {
+        <div class="small-12 columns">
+            <h3>@prod.Navn</h3>
+        </div>
+        <div class="small-12 columns">
+        <div class="row">
+            <div class="large-2 small-12 columns"><img src="/content/Images/ProduktBilleder/@prod.Billede" alt="@prod.Billede"/>
+            </div>
+            <div class="large-4 small-6 columns">
+                Varenummer: @prod.Varenummer
+                <br/>
+                Pris: <span class="@ViewBag.Tilbud">@prod.Pris</span>
+                <br/>
+                Leveringstid: @prod.Leveringstid
+            </div>
+            <div class="large-4 small-6 columns">
+                Producent: @prod.Producent
+                <br/>
+                @ViewBag.Istilbud
+                <br/>
+                Lager antal: @prod.Lagerantal
+            </div>
+            <div class="large-2 small-12 columns">
+                <div class="@ViewBag.Lagerstatus"></div>
+                <a href="/Home/Produkt/@prod.ID"></a>
+            </div>
+        </div>
+        </div>
+    }
+</div>

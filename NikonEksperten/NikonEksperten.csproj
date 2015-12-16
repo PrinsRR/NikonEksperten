@@ -203,6 +203,7 @@
     <Content Include="Views\Shared\Slider.cshtml" />
     <Content Include="Views\Home\Kategorier.cshtml" />
     <Content Include="Views\Shared\SoegeBox.cshtml" />
+    <Content Include="Views\Home\SoegeResultater.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -212,7 +213,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="content\Images\KategoriBilleder\" />
     <Folder Include="content\Images\OmosBilleder\" />
     <Folder Include="content\Images\ProduktBilleder\" />
     <Folder Include="obj\Debug\TempPE\" />
