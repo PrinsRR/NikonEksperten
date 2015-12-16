@@ -1,0 +1,14 @@
+﻿@model NikonRepo.Omos
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Ændre indhold på om os</h2>
+
+<input id="Text1" type="text" name="ID" value="@Model.ID"/>
+<input id="Text1" type="text" name="Overskrift" value="@Model.Overskrift"/>
+<textarea id="TextArea1" rows="2" cols="20" name="Tekst">@Model.Tekst</textarea>
+<input id="Hidden1" type="hidden" name="oldpic"  value="@Model.Billede"/>
+<input id="File1" type="file" name="Billede"/>

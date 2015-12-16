@@ -53,11 +53,10 @@
     <Compile Include="Models\BaseModels\Omos.cs" />
     <Compile Include="Models\BaseModels\Kontakt.cs" />
     <Compile Include="Models\BaseModels\Kategori.cs" />
+    <Compile Include="Models\ViewModels\KatListPro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
