@@ -19,11 +19,11 @@
             {
             @Html.DropDownList("KatID", @list)
             @:Maxpris:
-                @Html.TextBox("Navn", "")
+                @Html.TextBox("Maxpris", "")
             @:Søgeord:
-            @Html.TextBox("Pris", "")
+            @Html.TextBox("SoegeOrd", "")
 
-            <input type="submit" value="Add" />@ViewBag.UploadError
+            <input type="submit" value="Add" />@ViewBag.SoegError
 
         }
     </div>

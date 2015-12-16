@@ -16,11 +16,6 @@ namespace NikonRepo.Factories
             KatListPro KL = new KatListPro();
             KL.kategori = fkat.GetAll();
             KL.produkt = Get(id);
-
-
-
-
-
             return KL;
         }
 
