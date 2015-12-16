@@ -9,7 +9,8 @@ namespace NikonRepo
 	     public string KategoriNavn { get; set; }
 	     public string Tekst { get; set; }
 	     public string Billede { get; set; }
-        
-	 }
+	     public int ForsideProdukt { get; set; }
+
+     }
 
 }

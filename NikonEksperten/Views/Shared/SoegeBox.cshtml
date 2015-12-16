@@ -1,0 +1,31 @@
+﻿@using NikonRepo
+@using NikonRepo.Factories
+
+@{
+        facKategori fkat = new facKategori();
+        List<SelectListItem> list = new List<SelectListItem>();
+        list.Add(new SelectListItem() { Text = "Vælg Kategori", Value = "0" });
+        foreach (Kategori kat in fkat.GetAll())
+        {
+            list.Add(new SelectListItem() { Text = kat.KategoriNavn, Value = kat.ID.ToString() });
+
+        }
+}
+<div class="soegebox">
+    <header class="soegningheader">
+        <h5>Søgning</h5></header>
+    <div class="soegecontent">
+        @using (Html.BeginForm("SoegProdukter", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+            @Html.DropDownList("KatID", @list)
+            @:Maxpris:
+                @Html.TextBox("Navn", "")
+            @:Søgeord:
+            @Html.TextBox("Pris", "")
+
+            <input type="submit" value="Add" />@ViewBag.UploadError
+
+        }
+    </div>
+
+</div>

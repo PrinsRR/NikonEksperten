@@ -2,7 +2,9 @@
 
 body {
 }
-
+.padtop {
+    padding-top:20px;
+}
 /*Forsidestyles*/
 
 .forsidekategori {
@@ -22,7 +24,7 @@ body {
     display:block;
     margin:auto;
 }
-.KatDescription {
+.KatDescription, .KatDescriptionkat {
     background-color:#161616;
     padding:5px;
     min-height:80px;
@@ -30,14 +32,74 @@ body {
     font-size:12px;
     font-family:Arial;
 }
-.KatDescription h3 {
+
+.KatDescriptionkat {
+    min-height: 0;
+}
+
+.KatDescription h3, .KatDescriptionkat h3 {
     font-size:1.5em;
     color:#FBB03B;
     font-family:Arial;
     font-weight:bold;
     margin-bottom:0;
 }
+.KatDescriptionkat h3 {
+    margin-bottom:10px;
+}
 .noMarPad {
     margin-left:0 !important;
     margin-right:0 !important;
+}
+
+.forsidekategorikat {
+    margin:auto;
+    width:170px;
+    border:1px solid #FBB03B;
+    margin-top:30px;
+    margin-bottom:25px;
+}
+.forsidekategorikat .forsidekategoriimage {
+    height:160px;
+    width:100%;
+    padding:10px;
+}
+.forsidekategorikat .forsidekategoriimage img {
+    max-height:100%;
+    display:block;
+    margin:auto;
+}
+.soegebox {
+   
+    border:1px solid #FBB03B;
+    width:80%;
+    margin:auto;
+    margin-left:35px;
+}
+
+.soegningheader {
+    background-color:black;
+    padding:7px 0 1px 10px;
+}
+.soegningheader h5 {
+    color:#FBB03B;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.soegecontent {
+    padding:7px;
+}
+.soegecontent input, .soegecontent select {
+    border:black 1px solid;
+    border-radius:0;
+    color:black;
+    background-color:white;
+    padding:0;
+    height:1.5em;
+    font-size:1em;
+}
+.soegecontent input[type=submit] {
+    background-color:black;
+    color:#FBB03B;
+    border: 1px solid #FBB03B;
+    padding:1px 5px 1px 5px;
 }

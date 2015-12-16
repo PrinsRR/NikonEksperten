@@ -1,4 +1,5 @@
-﻿
+﻿@using NikonRepo
+@model List<NikonRepo.Kategori>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -9,48 +10,20 @@
     </div>
 </div>
 <div class="row noMarPad">
-    <div class="large-3 medium-6 small-12 columns">
-        <div class="forsidekategori">
-            <div class="forsidekategoriimage">
-                <img src="~/content/Images/KategoriBilleder/nikon_d300_1.jpg" />
-            </div>
-            <div class="KatDescription">
-                <h3>DSLR kamera</h3>
-                <div>I denne produktkategori finder du de nyeste NIKON DSLR kameraer.</div>
+    @foreach (Kategori kat in Model)
+    {
+        <div class="large-3 medium-6 small-12 columns">
+            <div class="forsidekategori">
+                <div class="forsidekategoriimage">
+                    <img src="~/content/Images/KategoriBilleder/@kat.Billede" />
+                </div>
+                <div class="KatDescription">
+                    <h3>@kat.KategoriNavn</h3>
+                    <div>@kat.Tekst.Replace(Environment.NewLine, "<br/>")</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="large-3 medium-6 small-12 columns">
-        <div class="forsidekategori">
-            <div class="forsidekategoriimage">
-                <img src="~/content/Images/KategoriBilleder/afs_dx_18_140.jpg"/>
-                </div>
-                <div class="KatDescription">
-                    <h3>Objektiver</h3>
-                    <div>Handler kun med objektiver af bedste kvalitet.</div>
-                </div>
-            </div>
-    </div>
-    <div class="large-3 medium-6 small-12 columns">
-        <div class="forsidekategori">
-            <div class="forsidekategoriimage">
-                <img src="~/content/Images/KategoriBilleder/untitled.png" />
-                </div>
-                <div class="KatDescription">
-                    <h3>Blitze</h3>
-                    <div>NIKON Speed Lights er blandt verdens bedste blitze.</div>
-                </div>
-            </div>
-    </div>
-    <div class="large-3 medium-6 small-12 columns">
-        <div class="forsidekategori">
-            <div class="forsidekategoriimage">
-                <img src="~/content/Images/KategoriBilleder/untitled3.png"/>
-                </div>
-                <div class="KatDescription">
-                    <h3>Stativer</h3>
-                    <div>Vi horhandler en lang række kvalitetsstativer, ikke kun NIKON.</div>
-                </div>
-            </div>
-    </div>
+
+    }
+
 </div>

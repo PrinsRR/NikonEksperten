@@ -1,0 +1,31 @@
+﻿@using NikonRepo
+@model List<NikonRepo.Kategori>
+
+@{
+    ViewBag.Title = "Kategorier";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<div class="row padtop">
+    <div class="large-3 columns">
+        <h3 class="text-center">Produkter</h3>
+@RenderPage("~/Views/Shared/SoegeBox.cshtml")
+    </div>
+    <div class="large-9 columns padtop">
+        <div class="row">
+            @foreach (Kategori kat in @Model)
+            {
+                <div class="large-3 medium-4 small-12 columns">
+                    <div class="forsidekategorikat">
+                        <div class="forsidekategoriimage">
+                            <img src="~/content/Images/KategoriBilleder/@kat.Billede"/>
+                        </div>
+                        <div class="KatDescriptionkat">
+                            <h3>@kat.KategoriNavn</h3>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
