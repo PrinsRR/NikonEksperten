@@ -41,9 +41,9 @@ namespace NikonEksperten.Areas.Admin.Controllers
 
             if (billede != null)
             {
-                string path = Request.PhysicalApplicationPath + "Content/Images/";
+                string path = Request.PhysicalApplicationPath + "Content/Images/KategoriBilleder/";
             string file = UP.UploadImage(billede, path, 400, true);
-                k.Billede = billede.FileName;
+                k.Billede = file;
             }
             else
             {
@@ -67,16 +67,17 @@ namespace NikonEksperten.Areas.Admin.Controllers
                 
 
             {
-                string path = Request.PhysicalApplicationPath + "Content/Images/";
+                string path = Request.PhysicalApplicationPath + "Content/Images/KategoriBilleder/";
                 string file = UP.UploadImage(billede, path, 400, true);
-                k.Billede = billede.FileName;
-                facKat.Insert(k);
+                k.Billede = file;
+                
+               
             }
             else
             {
-                
+                k.Billede = "Product-Image-Coming-Soon.png";
             }
-           
+            facKat.Insert(k);
             return RedirectToAction("Kategorier");
         }
 

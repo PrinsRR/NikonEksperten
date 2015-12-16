@@ -95,6 +95,7 @@
     <Content Include="content\Foundation\foundation.css" />
     <Content Include="content\Foundation\foundation.min.css" />
     <Content Include="content\Images\Blandet\Layoutheader.jpg" />
+    <Content Include="content\Images\Blandet\Product-Image-Coming-Soon.png" />
     <Content Include="content\scripts\jquery-2.1.4.min.js" />
     <Content Include="content\scripts\JScripts.js" />
     <Content Include="content\scripts\Slidescript.js" />
@@ -119,6 +120,8 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CMSController.cs" />
     <Compile Include="Areas\Admin\Controllers\CMSProController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OmosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,6 +148,8 @@
     <Content Include="Areas\Admin\Views\CMSPro\Index.cshtml" />
     <Content Include="Areas\Admin\Views\CMSPro\Addpro.cshtml" />
     <Content Include="Areas\Admin\Views\CMSPro\Rediger.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Omos\Index.cshtml" />
     <None Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -160,6 +165,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="content\Images\KategoriBilleder\" />
+    <Folder Include="content\Images\OmosBilleder\" />
     <Folder Include="content\Images\ProduktBilleder\" />
     <Folder Include="content\Images\SliderBilleder\" />
   </ItemGroup>
