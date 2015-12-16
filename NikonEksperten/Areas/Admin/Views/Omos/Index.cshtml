@@ -6,9 +6,12 @@
 }
 
 <h2>Ændre indhold på om os</h2>
+<form action="/Admin/Omos/Index/" method="POST" enctype="multipart/form-data">
+    <input id="Text1" type="hidden" value="@Model.ID" />
+    <input id="Text1" type="text" name="Overskrift" value="@Model.Overskrift" placeholder="Overskrift"/>
+    <textarea id="TextArea1" rows="6" cols="20" name="Tekst" placeholder="Tekst">@Model.Tekst</textarea>
+    <input id="Hidden1" type="hidden" name="oldpic" value="@Model.Billede" />
+    <input id="File1" type="file" name="Billede"/>
+    <input id="Submit1" type="submit" value="submit"/>
 
-<input id="Text1" type="text" name="ID" value="@Model.ID"/>
-<input id="Text1" type="text" name="Overskrift" value="@Model.Overskrift"/>
-<textarea id="TextArea1" rows="2" cols="20" name="Tekst">@Model.Tekst</textarea>
-<input id="Hidden1" type="hidden" name="oldpic"  value="@Model.Billede"/>
-<input id="File1" type="file" name="Billede"/>
+</form>
