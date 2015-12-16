@@ -189,10 +189,13 @@
     <Content Include="Areas\Admin\Views\CMSPro\Addpro.cshtml" />
     <Content Include="Areas\Admin\Views\CMSPro\Rediger.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Omos\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Omos\Index.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="Areas\Admin\Views\Omos\AddIndhold.cshtml" />
     <None Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -212,7 +215,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="content\Images\KategoriBilleder\" />
     <Folder Include="content\Images\OmosBilleder\" />
     <Folder Include="content\Images\ProduktBilleder\" />
     <Folder Include="obj\Debug\TempPE\" />

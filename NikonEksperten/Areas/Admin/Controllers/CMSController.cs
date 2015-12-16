@@ -64,18 +64,22 @@ namespace NikonEksperten.Areas.Admin.Controllers
         public ActionResult Addkat(Kategori k, HttpPostedFileBase billede)
         {
             if (ModelState.IsValid)
-                
+
 
             {
-                string path = Request.PhysicalApplicationPath + "Content/Images/KategoriBilleder/";
-                string file = UP.UploadImage(billede, path, 400, true);
-                k.Billede = file;
-                
-               
-            }
-            else
-            {
-                k.Billede = "Product-Image-Coming-Soon.png";
+                if (billede != null)
+                {
+                    string path = Request.PhysicalApplicationPath + "Content/Images/KategoriBilleder/";
+                    string file = UP.UploadImage(billede, path, 400, true);
+                    k.Billede = file;
+                }
+                else
+                {
+                    k.Billede = "Product-Image-Coming-Soon.png";
+                }
+
+
+
             }
             facKat.Insert(k);
             return RedirectToAction("Kategorier");
