@@ -37,9 +37,9 @@ namespace NikonEksperten.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Rediger(HttpPostedFileBase billede, Kategori k, string oldpic)
         {
-       
-
-            if (billede != null)
+            if (ModelState.IsValid)
+            {
+                 if (billede != null)
             {
                 string path = Request.PhysicalApplicationPath + "Content/Images/KategoriBilleder/";
             string file = UP.UploadImage(billede, path, 400, true);
@@ -50,9 +50,13 @@ namespace NikonEksperten.Areas.Admin.Controllers
                 k.Billede = oldpic;
             }
 
-            facKat.Update(k);
-            return RedirectToAction("Kategorier");
+            facKat.Update(k); 
+           
 
+            }   
+     return RedirectToAction("Kategorier");
+          
+         
         }
         
         public ActionResult AddKat()
@@ -78,11 +82,11 @@ namespace NikonEksperten.Areas.Admin.Controllers
                     k.Billede = "Product-Image-Coming-Soon.png";
                 }
 
-
+                facKat.Insert(k);
+            
 
             }
-            facKat.Insert(k);
-            return RedirectToAction("Kategorier");
+           return RedirectToAction("Kategorier");
         }
 
 
