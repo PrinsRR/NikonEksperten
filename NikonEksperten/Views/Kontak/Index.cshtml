@@ -1,0 +1,49 @@
+﻿@model NikonRepo.Kontakt
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Kontakt os</h2>
+
+<div class="row">
+
+    <div class="medium-3 small-12 columns">
+        <div class="left">
+            <div class="headerkon">
+                <h6>Vores adresse</h6>
+            </div>
+            <p>@Model.ButiksNavn</p>
+            <p>@Model.Adresse</p>
+            <p>@Model.Postnr @Model.Bynavn</p><br/><br/>
+
+            <p>@Model.telefon</p>
+            <p>@Model.fax</p><br/><br/>
+
+            <p>@Model.mail</p>
+            <p>@Model.website</p><br/>
+
+
+
+
+
+        </div>
+    </div>
+    <div class="medium-4 small-12 columns">
+        <div class="midten">
+            <div class="headerkon">
+                <h6>Åbninstider</h6>
+            </div>
+        </div>
+    </div>
+    <div class="medium-5 small-12 columns">
+        <div class="right">
+            <div class="headerkon">
+                <h6>Send os en mail</h6>
+            </div>
+        </div>
+    </div>
+
+</div>
+

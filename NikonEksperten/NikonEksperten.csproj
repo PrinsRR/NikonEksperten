@@ -184,6 +184,7 @@
     <Compile Include="Areas\Admin\Controllers\KontaktController.cs" />
     <Compile Include="Areas\Admin\Controllers\OmosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KontakController.cs" />
     <Compile Include="Controllers\OmController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -233,6 +234,7 @@
     <Content Include="Views\Shared\SoegeBox.cshtml" />
     <Content Include="Views\Home\SoegeResultater.cshtml" />
     <Content Include="Views\Om\Index.cshtml" />
+    <Content Include="Views\Kontak\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
