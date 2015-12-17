@@ -1,18 +1,19 @@
 ﻿@using NikonRepo
-@model List<NikonRepo.Produkter>
+@model List<Produkter>
 
     @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
     }
 
-    <h2>Index</h2>
+    <h2>Produkter</h2>
 
 
-        <a href="/Admin/CMSPro/Addpro/">Opret produkt</a>
-                <table>
-                   @foreach (Produkter pro in Model)
-                   {
-                       <tr><td>@pro.ID</td><td>@pro.Varenummer</td><td>@pro.Navn</td><td>@pro.Lagerantal</td><td><a href="/Admin/CMSPro/Rediger/@pro.ID">R</a></td><td><a href="/Admin/CMSPro/Delete/@pro.ID">D</a></td></tr>
-                   }
-               </table>
+<a href="/Admin/CMSPro/Addpro/">Opret produkt</a>
+<table class="katTable">
+    <tr><th>ID</th><th>Navn</th><th>Pris</th><th>Lagerantal</th><th>Rediger</th><th>Slet</th></tr>
+    @foreach (Produkter pro in Model)
+    {
+        <tr><td>@pro.ID</td><td>@pro.Navn</td><td>@pro.Pris</td><td>@pro.Lagerantal</td><td><a href="/Admin/CMSPro/Rediger/@pro.ID"><i class="fa fa-edit"></i></a></td><td><a href="/Admin/CMSPro/Delete/@pro.ID"><i class="fa fa-remove"></i></a></td></tr>
+    }
+</table>

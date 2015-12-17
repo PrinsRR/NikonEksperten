@@ -10,13 +10,14 @@
 <h2>Kategorier</h2>
 
                  <a href="/Admin/CMS/Addkat">Opret kategori</a>
-               <table>
-                   @foreach (Kategori kat in Model)
-                   {
+<table class="katTable">
+    <tr><th>ID</th><th>Navn</th><th>Billede</th><th>Rediger</th><th>Slet</th></tr>
+    @foreach (Kategori kat in Model)
+    {
 
-                       <tr><td>@kat.ID</td><td>@kat.KategoriNavn</td><td>@kat.Billede</td><td><a href="/Admin/CMS/Rediger/@kat.ID">I</a></td><td><a href="/Admin/CMS/Delete/@kat.ID">X</a></td></tr>
+        <tr><td>@kat.ID</td><td>@kat.KategoriNavn</td><td>@kat.Billede</td><td><a href="/Admin/CMS/Rediger/@kat.ID"><i class="fa fa-edit"></i></a></td><td><a href="/Admin/CMS/Delete/@kat.ID"><i class="fa fa-remove"></i></a></td></tr>
 
-                   }
+    }
 
-               </table>
+</table>
 

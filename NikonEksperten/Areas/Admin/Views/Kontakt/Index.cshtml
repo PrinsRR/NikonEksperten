@@ -4,19 +4,60 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Ændre Kontakt indhold</h2>
 
 <form action="/Admin/Kontakt/Index/" method="POST" enctype="multipart/form-data">
-    <input id="Text1" type="hidden" name="ID" value="@Model.ID" />
-    <input id="Text1" type="text" name="ButiksNavn" value="@Model.ButiksNavn" placeholder="Butik navn"/>
-    <input id="Text1" type="text" name="Adresse" value="@Model.Adresse"  placeholder="Adresse"/>
-    <input id="Text1" type="text" name="Postnr" value="@Model.Postnr"  placeholder="Postnr"/>
-    <input id="Text1" type="text" name="Bynavn" value="@Model.Bynavn"  placeholder="Bynavn"/>
-    <input id="Text1" type="text" name="telefon" value="@Model.telefon"  placeholder="Telefonnummer"/>
-    <input id="Text1" type="text" name="fax"value="@Model.fax"  placeholder="Fax"/>
-    <input id="Text1" type="text" name="mail" value="@Model.mail"  placeholder="Email adresse"/>
-    <input id="Text1" type="text" name="website" value="@Model.website"  placeholder="Website adresse"/>
-    <input id="Text1" type="text" name="aabningtider"value="@Model.aabningtider"  placeholder="Åbningstider i butikken"/>
-    <input id="Submit1" type="submit" value="submit"/>
-
+    <table class="katTable">
+        <tr><td colspan="4"><input id="Text1" type="hidden" name="ID" value="@Model.ID" /></td></tr>
+        <tr><td>Butiksnavn  :</td>
+            <td colspan="4">
+                <input id="Text1" type="text" name="ButiksNavn" value="@Model.ButiksNavn" placeholder="Butik navn" />
+            </td>
+        </tr>
+        <tr><td>Adresse :</td>
+            <td colspan="4">
+                <input id="Text1" type="text" name="Adresse" value="@Model.Adresse" placeholder="Adresse" />
+            </td>
+        </tr>
+        <tr><td> Postnr :</td>
+            <td colspan="4">
+               <input id="Text1" type="text" name="Postnr" value="@Model.Postnr" placeholder="Postnr" />
+            </td>
+        </tr>
+        <tr><td>Bynavn :</td>
+            <td colspan="4">
+                <input id="Text1" type="text" name="Bynavn" value="@Model.Bynavn" placeholder="Bynavn" />
+            </td>
+        </tr>
+        <tr><td>   Telefon :</td>
+            <td colspan="4">
+             <input id="Text1" type="text" name="telefon" value="@Model.telefon" placeholder="Telefonnummer" />
+            </td>
+        </tr>
+        <tr><td>Fax :</td>
+            <td colspan="4">
+                <input id="Text1" type="text" name="fax" value="@Model.fax" placeholder="Fax" />
+            </td>
+        </tr>
+        <tr><td>   Mail :</td>
+            <td colspan="4">
+             <input id="Text1" type="text" name="mail" value="@Model.mail" placeholder="Email adresse" />
+            </td>
+        </tr>
+        <tr><td> Wesite :</td>
+            <td colspan="4">
+               <input id="Text1" type="text" name="website" value="@Model.website" placeholder="Website adresse" />
+            </td>
+        </tr>
+        <tr><td>Åbningstider :</td>
+            <td colspan="4">
+               <textarea name="aabningtider"placeholder="Åbningstider">@Model.aabningtider</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input id="AddkatKnap" type="submit" value="submit" />
+            </td>
+        </tr>
+    </table>
 </form>

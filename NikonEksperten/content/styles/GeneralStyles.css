@@ -17,6 +17,9 @@ footer {
   height: 36px;
   padding-top: 2px; }
 
+.margbot {
+  margin-bottom: 20px !important; }
+
 .copyright {
   line-height: 30px;
   margin-left: 20px;

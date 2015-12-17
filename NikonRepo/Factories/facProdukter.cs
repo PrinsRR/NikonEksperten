@@ -42,12 +42,28 @@ namespace NikonRepo.Factories
                 var mapper = new Mapper<Produkter>();
                 list = mapper.MapList(cmd.ExecuteReader());
                 if (list != null)
-                {
+               {
                     cmd.Connection.Close();
                 }
                 cmd.Connection.Close();
                 return list;
             }
+
+        }
+
+        public List<Produkter> Getprodukt(int katID)
+        {
+            var mapper = new Mapper<Produkter>();
+            using (var cmd = new SqlCommand("SELECT * FROM Produkter WHERE KategoriID=@katID", Conn.CreateConnection()))
+            {
+                cmd.Parameters.AddWithValue("@katID", katID);
+
+                List<Produkter> list = new List<Produkter>();
+                list = mapper.MapList(cmd.ExecuteReader());
+                cmd.Connection.Close();
+                return list;
+            }
+
 
         }
     }

@@ -10,29 +10,78 @@
 <h2>Rediger</h2>
 
 <form action="/Admin/CMSPro/Rediger/" method="POST" enctype="multipart/form-data">
-    <select name="KategoriID">
-        @foreach (Kategori kat in Model.kategori)
-        {
-           
-        
-                     <option value="@kat.ID">@kat.KategoriNavn</option>
-            
-      
-        }
+    <table class="katTable">
+        <tr><td> Vælg kategori</td>
+            <td colspan="1">
+                Kategori : <select name="KategoriID">
+                    @foreach (Kategori kat in Model.kategori)
+                    {
 
-    </select>
-   <input type="hidden" value="@Model.produkt.ID" name="ID"/>
-    <input id="Text1" type="text" name="Overskrift" placeholder="Overskrift" value="@Model.produkt.Overskrift"/>
-    <input id="Text1" type="text" name="Navn" placeholder="Navn" value="@Model.produkt.Navn"/>
-    <input id="Text1" type="text" name="Varenummer" placeholder="Varenummer" value="@Model.produkt.Varenummer"/>
-    <input id="Text1" type="text" name="Pris" placeholder="Pris" value="@Model.produkt.Pris"/>
-    <input id="Text1" type="text" name="Tilbudspris" placeholder="Tilbudspris" value="@Model.produkt.Tilbudspris"/>
-    <input id="Text1" type="text" name="Leveringstid" placeholder="Leveringstid" value="@Model.produkt.Leveringstid"/>
-    <input id="Text1" type="text" name="Lagerantal" placeholder="Lagerantal" value="@Model.produkt.Lagerantal"/>
-    <input id="Text1" type="file" name="pic"/>
-    <input type="hidden" value="@Model.produkt.Billede" name="oldpic"/>
-    <input id="Text1" type="text" name="Beskrivelse" placeholder="Beskrivelse" value="@Model.produkt.Beskrivelse"/>
-    <input id="Text1" type="text" name="Producent" placeholder="Producent" value="@Model.produkt.Producent"/>
-    <input id="Submit1" type="submit" value="submit" />
+
+                    <option value="@kat.ID">@kat.KategoriNavn</option>
+
+
+                    }
+
+                </select>
+            </td>
+        </tr>
+        <tr><td colspan="1"><input type="hidden" value="@Model.produkt.ID" name="ID" /></td></tr>
+        <tr>
+            <td>Overskrift :</td>
+            <td colspan="1">
+                <input id="Text1" type="text" name="Overskrift" placeholder="Overskrift" value="@Model.produkt.Overskrift"/>
+            </td>
+        </tr>
+        <tr><td>Varenavn : </td>
+            <td colspan="1">
+                <input id="Text1" type="text" name="Navn" placeholder="Navn" value="@Model.produkt.Navn" />
+            </td>
+        </tr>
+   
+        <tr><td> Pris : </td>
+            <td colspan="1">
+               <input id="Text1" type="text" name="Pris" placeholder="Pris" value="@Model.produkt.Pris" />
+            </td>
+        </tr>
+        <tr><td>Tilbudspris :</td>
+            <td colspan="1">
+                <input id="Text1" type="text" name="Tilbudspris" placeholder="Tilbudspris" value="@Model.produkt.Tilbudspris" />
+            </td>
+        </tr>
+        <tr><td>Leveringstid : </td>
+            <td colspan="1">
+                <input id="Text1" type="text" name="Leveringstid" placeholder="Leveringstid" value="@Model.produkt.Leveringstid" />
+            </td>
+        </tr>
+        <tr><td>  Lagerantal :</td>
+            <td colspan="1">
+              <input id="Text1" type="text" name="Lagerantal" placeholder="Lagerantal" value="@Model.produkt.Lagerantal" />
+            </td>
+        </tr>
+        <tr><td>Billede :</td>
+            <td colspan="1">
+                <input id="Text1" type="file" name="pic" />
+            </td>
+        </tr>
+
+
+        <tr><td>Beskrivelse :</td>
+            <td colspan="1">
+                <textarea rows="5" name="Beskrivelse">@Model.produkt.Beskrivelse</textarea>
+            </td>
+        </tr>
+        <tr><td>Producent :</td>
+            <td colspan="1">
+                <input id="Text1" type="text" name="Producent" placeholder="Producent" value="@Model.produkt.Producent" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input id="AddkatKnap" type="submit" value="Gem" />
+            </td>
+        </tr>
+    </table><input type="hidden" value="@Model.produkt.Billede" name="oldpic" />
+    <input id="Text1" type="hidden" name="Varenummer" placeholder="Varenummer" value="@Model.produkt.Varenummer" />
 </form>
 

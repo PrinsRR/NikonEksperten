@@ -1,0 +1,24 @@
+﻿@model NikonRepo.Omos
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="large-6 medium-9 small-12 columns">
+        <h1 class="overskriftH1">@Model.Overskrift</h1>
+
+    </div>
+</div>
+<div class="row margbot">
+    <div class="large-6 medium-6 small-12 columns textpadding">
+        <span >@Model.Tekst</span>
+    </div>
+    <div class="large-6 medium-6 small-12 columns">
+         <img src="/Content/Images/OmosBilleder/@Model.Billede"/>   
+    </div>
+</div>
+

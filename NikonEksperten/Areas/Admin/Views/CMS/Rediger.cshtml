@@ -8,14 +8,27 @@
 <h2>Rediger</h2>
 
 <form action="/Admin/CMS/Rediger" enctype="multipart/form-data" method="POST">
+    <table>
+        <tr><td colspan="2"><input id="ID" name="ID" type="hidden" value="@Model.ID"/></td></tr>
+        <tr><td colspan="2"><input id="Navn" name="KategoriNavn" type="text" value="@Model.KategoriNavn" placeholder="Kategori navn"/></td></tr>
+        <tr>
+            <td colspan="2">
+                <textarea name="Tekst" rows="5" placeholder="Tekst">@Model.Tekst</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input id="File1" type="file" name="billede"/>
+            </td>
+        </tr>
 
-    <input id="ID" name="ID" type="hidden" value="@Model.ID"/>
-    <input id="Navn" name="KategoriNavn" type="text" value="@Model.KategoriNavn" placeholder="Kategori navn"/>
-    <input id="Tekst" name="Tekst" type="text" value="@Model.Tekst" placeholder="Tekst"/>
-    <input id="File1" type="file" name="billede" />
-    <input name="oldpic" type="hidden" value="@Model.Billede"/>
-    <input id="Submit1" type="submit" value="submit" />
 
+
+
+        <tr><td colspan="2"><input id="AddkatKnap" type="submit" value="submit"/></td></tr>
+ 
+    </table>
+    <input name="oldpic" type="hidden" value="@Model.Billede" />
 </form>
 
 
