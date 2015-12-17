@@ -1,0 +1,77 @@
+﻿@model NikonRepo.Produkter
+
+@{
+    ViewBag.Title = "Produkt";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="row">
+    <div class="small-12 columns">
+        <h2>@Model.Navn</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="large-3 columns">
+
+        @RenderPage("~/Views/Shared/SoegeBox.cshtml")
+    </div>
+    <div class="large-9 columns">
+        <div class="row produktcontainer">
+            <div class="large-6 medium-12 columns large-push-6">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="produktimage">
+                            <img src="~/content/Images/ProduktBilleder/@Model.Billede"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns text-right">
+                        <a href="/Home/Produkter/@Model.KategoriID">[ Tilbage ]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="large-6 medium-12 columns large-pull-6 end">
+                <div>
+                    @Model.Overskrift
+                </div>
+                <div>
+                    @Model.Beskrivelse.Replace(Environment.NewLine, "<br/>")
+                </div>
+                <div>
+                    Varenummer: @Model.Varenummer
+                    <br/>
+                    Pris: @Model.Pris
+                    <br/>
+                    Leveringstid: @Model.Leveringstid
+                    <br/>
+                    Producent: @Model.Producent
+                    <br/>
+                    @{
+                        string lager = string.Empty;
+                        if (@Model.Lagerantal >= 20)
+                        {
+                            lager = "<span style='color:lightgreen'>På lager</span>";
+                        }
+                        else if (@Model.Lagerantal < 20 && @Model.Lagerantal > 0)
+                        {
+                            lager = "<span style='color:yellow'>På lager</span>";
+                        }
+                        else
+                        {
+                            lager = "<span style='color:red'>Ikke på lager</span>";
+                        }
+                        {
+
+                        }
+                    }
+                    Lagerstatus: @Html.Raw(lager)
+                    <br/>
+                    Lager antal: @Model.Lagerantal
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

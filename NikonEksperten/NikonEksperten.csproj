@@ -90,7 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
@@ -171,9 +170,6 @@
     </Content>
     <Content Include="content\styles\SlideStyles.css" />
     <Content Include="Global.asax" />
-    <Content Include="obj\Debug\NikonEksperten.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\NikonEksperten.dll" />
-    <Content Include="obj\Debug\NikonEksperten.pdb" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -227,12 +223,13 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
     <Content Include="content\Foundation\foundation.css.map" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\NikonEksperten.csprojResolveAssemblyReference.cache" />
     <Content Include="Views\Shared\Slider.cshtml" />
     <Content Include="Views\Home\Kategorier.cshtml" />
     <Content Include="Views\Shared\SoegeBox.cshtml" />
     <Content Include="Views\Home\SoegeResultater.cshtml" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Views\Home\Produkter.cshtml" />
+    <Content Include="Views\Home\Produkt.cshtml" />
     <Content Include="Views\Om\Index.cshtml" />
     <Content Include="Views\Kontak\Index.cshtml" />
     <None Include="Web.Debug.config">
@@ -244,7 +241,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NikonRepo\NikonRepo.csproj">

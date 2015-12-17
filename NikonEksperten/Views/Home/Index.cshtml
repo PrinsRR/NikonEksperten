@@ -13,7 +13,7 @@
     @foreach (Kategori kat in Model)
     {
         <div class="large-3 medium-6 small-12 columns">
-            <div class="forsidekategori">
+            <a href="/Home/Produkter/@kat.ID" class="forsidekategori">
                 <div class="forsidekategoriimage">
                     <img src="~/content/Images/KategoriBilleder/@kat.Billede" />
                 </div>
@@ -21,7 +21,7 @@
                     <h3>@kat.KategoriNavn</h3>
                     <div>@kat.Tekst.Replace(Environment.NewLine, "<br/>")</div>
                 </div>
-            </div>
+            </a>
         </div>
 
     }

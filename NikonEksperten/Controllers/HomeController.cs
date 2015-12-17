@@ -23,27 +23,10 @@ namespace NikonEksperten.Controllers
             return View(fkat.GetAll());
         }
 
-        public ActionResult SoegeResultater(List<Produkter> pl)
+        public ActionResult SoegeResultater()
         {
-            if (pl != null)
-            {
-                foreach (Produkter prod in pl)
-                {
-                    if (prod.Tilbudspris <= 0)
-                    {
-                        ViewBag.Tilbud = "IngenTilbud";
-                        ViewBag.Istilbud = "<br/>";
-                    }
-                    else
-                    {
-                        ViewBag.Tilbud = "HarTilbud";
-                        ViewBag.Istilbud = prod.Tilbudspris + " kr.";
-                    }
-                }
-                @ViewBag.Encounters = pl.Count;
-                
-            }
-            return View(pl);
+            var list = TempData["list"] as List<Produkter>;
+            return View(list);
         }
         [HttpPost]
         public ActionResult SoegProdukter(int KatID, int Maxpris, string SoegeOrd)
@@ -58,9 +41,33 @@ namespace NikonEksperten.Controllers
                     pl.Add(produkt);
                 }
                 ViewBag.SoegError = "Korrekt Input";
-                return RedirectToAction("SoegeResultater", pl);
+                TempData["list"] = pl;
+                return RedirectToAction("SoegeResultater");
             }
             return RedirectToAction("Index");
         }
+
+        public ActionResult Produkter(int id = 0)
+        {
+            if (id != 0)
+            {
+                facProdukter fp = new facProdukter();
+                ViewBag.Kategori = fkat.Get(id).KategoriNavn;
+                return View(fp.GetBy("KategoriID", id));
+            }
+            return RedirectToAction("Kategorier");
+        }
+        public ActionResult Produkt(int id = 0)
+        {
+            if (id != 0)
+            {
+                facProdukter fp = new facProdukter();
+                return View(fp.Get(id));
+            }
+
+                return RedirectToAction("Kategorier");
+
+        }
+
     }
 }

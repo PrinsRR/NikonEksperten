@@ -2,14 +2,12 @@
 @model List<NikonRepo.Produkter>
 
 @{
-    ViewBag.Title = "SoegeResultater";
+    ViewBag.Title = @ViewBag.Kategori + " - Produkter";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-
-
 <div class="row">
     <div class="small-12 columns">
-        <h2>SoegeResultater</h2>
+        <h2>@ViewBag.Kategori</h2>
     </div>
 </div>
 <div class="row">
@@ -18,8 +16,6 @@
         @RenderPage("~/Views/Shared/SoegeBox.cshtml")
     </div>
     <div class="large-9 columns">
-        @if (Model != null)
-    {
         <div class="row">
             <div class="small-12 columns">
                 @foreach (Produkter prod in @Model)
@@ -39,18 +35,18 @@
                                     <br />
 
                                     @{
-                                    string tilbud = string.Empty;
+                                        string tilbud = string.Empty;
                                     }
                                     @if (prod.Tilbudspris > 0)
-                                {
-                                @:Pris: <span class="HarTilbud">@prod.Pris kr.</span>
+                                    {
+                                        @:Pris: <span class="HarTilbud">@prod.Pris kr.</span>
                                     tilbud = "<br />Nu kun:" + prod.Tilbudspris + " kr.";
-                                }
-                                else
-                                {
-                                @:Pris: <span class="IngenTilbud">@prod.Pris kr.</span>
+                                    }
+                                    else
+                                    {
+                                        @:Pris: <span class="IngenTilbud">@prod.Pris kr.</span>
                                     tilbud = "<br/>";
-                                }
+                                    }
 
                                     <br />
                                     Leveringstid: @prod.Leveringstid
@@ -63,21 +59,21 @@
                                 </div>
                                 <div class="large-2 small-12 columns">
                                     @{
-                                    string color = string.Empty;
-                                    if (@prod.Lagerantal >= 25)
-                                    {
-                                        color = "rgb(0,255,0);";
-                                    }
-                                    else if (@prod.Lagerantal <= 0)
-                                    {
-                                        color = "rgb(255,0,0);";
-                                    }
-                                    else
-                                    {
-                                        int red = Convert.ToInt16(Math.Round((25 - @prod.Lagerantal)*10.2));
-                                        int green = Convert.ToInt16(Math.Round(10.2*@prod.Lagerantal));
-                                        color = "rgb(" + red + "," + green + ",0);";
-                                    }
+                                        string color = string.Empty;
+                                        if (@prod.Lagerantal >= 25)
+                                        {
+                                            color = "rgb(0,255,0);";
+                                        }
+                                        else if (@prod.Lagerantal <= 0)
+                                        {
+                                            color = "rgb(255,0,0);";
+                                        }
+                                        else
+                                        {
+                                            int red = Convert.ToInt16(Math.Round((25 - @prod.Lagerantal) * 10.2));
+                                            int green = Convert.ToInt16(Math.Round(10.2 * @prod.Lagerantal));
+                                            color = "rgb(" + red + "," + green + ",0);";
+                                        }
 
                                     }
                                     <div style="background-color: @color" class="lagerstatus"></div>
@@ -89,10 +85,6 @@
                                         }
             </div>
         </div>
-    }
-    else
-    {
-                                        <h3>Der blev ikke fundet nogen produkter!</h3>
-    }
+
     </div>
 </div>
