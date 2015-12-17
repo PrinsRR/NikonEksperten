@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,14 +23,14 @@ namespace NikonRepo.Factories
 
         public List<Produkter> AdvSearch(int ID, int MaxPris, string SoegeOrd)
         {
-            string SQL = "SELECT * FROM Produkter WHERE (Tekst LIKE @SoegeOrd OR Navn LIKE @SoegeOrd)";
+            string SQL = "SELECT * FROM Produkter WHERE (Navn LIKE @SoegeOrd OR Overskrift LIKE @SoegeOrd OR Beskrivelse LIKE @SoegeOrd)";
             if (MaxPris != 0)
             {
                 SQL += " AND Pris <= @pris";
             }
             if (ID != 0)
             {
-                SQL += " AND KatID=@katid";
+                SQL += " AND KategoriID=@katid";
             }
             using (var cmd = new SqlCommand(SQL, Conn.CreateConnection()))
 
@@ -37,9 +38,13 @@ namespace NikonRepo.Factories
                 cmd.Parameters.AddWithValue("@pris", MaxPris);
                 cmd.Parameters.AddWithValue("@SoegeOrd", "%" + SoegeOrd + "%");
                 cmd.Parameters.AddWithValue("@katid", ID);
-
+                List<Produkter> list = new List<Produkter>();
                 var mapper = new Mapper<Produkter>();
-                List<Produkter> list = mapper.MapList(cmd.ExecuteReader());
+                list = mapper.MapList(cmd.ExecuteReader());
+                if (list != null)
+                {
+                    cmd.Connection.Close();
+                }
                 cmd.Connection.Close();
                 return list;
             }

@@ -93,3 +93,7 @@
   border: 1px solid #FBB03B;
   padding: 1px 5px 1px 5px; }
 
+.HarTilbud {
+  text-decoration: line-through;
+  color: red; }
+

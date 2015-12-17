@@ -25,6 +25,24 @@ namespace NikonEksperten.Controllers
 
         public ActionResult SoegeResultater(List<Produkter> pl)
         {
+            if (pl != null)
+            {
+                foreach (Produkter prod in pl)
+                {
+                    if (prod.Tilbudspris <= 0)
+                    {
+                        ViewBag.Tilbud = "IngenTilbud";
+                        ViewBag.Istilbud = "<br/>";
+                    }
+                    else
+                    {
+                        ViewBag.Tilbud = "HarTilbud";
+                        ViewBag.Istilbud = prod.Tilbudspris + " kr.";
+                    }
+                }
+                @ViewBag.Encounters = pl.Count;
+                
+            }
             return View(pl);
         }
         [HttpPost]
@@ -40,9 +58,9 @@ namespace NikonEksperten.Controllers
                     pl.Add(produkt);
                 }
                 ViewBag.SoegError = "Korrekt Input";
-                return View("SoegeResultater", pl);
+                return RedirectToAction("SoegeResultater", pl);
             }
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }
