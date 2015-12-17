@@ -90,7 +90,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
@@ -239,8 +238,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="content\Images\OmosBilleder\" />
-    <Folder Include="content\Images\ProduktBilleder\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NikonRepo\NikonRepo.csproj">
