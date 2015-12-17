@@ -133,6 +133,9 @@
     <Content Include="content\styles\AdminStyles.css">
       <DependentUpon>AdminStyles.scss</DependentUpon>
     </Content>
+    <Content Include="content\styles\AdminStyles.min.css">
+      <DependentUpon>AdminStyles.css</DependentUpon>
+    </Content>
     <Content Include="content\styles\GeneralStyles.css">
       <DependentUpon>GeneralStyles.scss</DependentUpon>
     </Content>
