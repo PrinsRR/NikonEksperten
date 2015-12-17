@@ -1,4 +1,25 @@
 ﻿// styles shared  between Main and Admin
 
-body {background-color:#494949;
+body {
+  background-color: #494949; }
+
+.headerBIG { margin-top: 20px;}
+.headerSMALL { margin-top: 0;}
+
+nav { background-color: #e0d4be;height: 36px;padding-top: 2px; }
+
+footer  { background-color: #e0d4be;height: 36px;padding-top: 2px;}
+.copyright { line-height: 30px;margin-left: 20px;color: #333;font-family: "Source Sans Pro";font-size: 1.00em;}
+.afterfooter {
+    height: 50px;
+    background-color: white;
+}
+.OrangeBorders { width: 100%;border-top: 1px solid orange;border-bottom: 1px solid orange;}
+
+nav ul { margin: auto;width: 520px;}
+nav ul li { text-decoration: none;display: inline;}
+nav ul li a { display: inline-block;padding-left: 35px;padding-right: 35px;line-height: 30px;color: #333;font-family: "Source Sans Pro";font-weight: bold;font-size: 1.05em;}
+.content {
+    background-color: white;
+    min-height: 400px;
 }
