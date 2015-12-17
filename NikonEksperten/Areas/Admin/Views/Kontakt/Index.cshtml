@@ -1,0 +1,22 @@
+﻿@model NikonRepo.Kontakt
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<form action="/Admin/Kontakt/Index/" method="POST" enctype="multipart/form-data">
+    <input id="Text1" type="hidden" name="ID" value="@Model.ID" />
+    <input id="Text1" type="text" name="ButiksNavn" value="@Model.ButiksNavn" placeholder="Butik navn"/>
+    <input id="Text1" type="text" name="Adresse" value="@Model.Adresse"  placeholder="Adresse"/>
+    <input id="Text1" type="text" name="Postnr" value="@Model.Postnr"  placeholder="Postnr"/>
+    <input id="Text1" type="text" name="Bynavn" value="@Model.Bynavn"  placeholder="Bynavn"/>
+    <input id="Text1" type="text" name="telefon" value="@Model.telefon"  placeholder="Telefonnummer"/>
+    <input id="Text1" type="text" name="fax"value="@Model.fax"  placeholder="Fax"/>
+    <input id="Text1" type="text" name="mail" value="@Model.mail"  placeholder="Email adresse"/>
+    <input id="Text1" type="text" name="website" value="@Model.website"  placeholder="Website adresse"/>
+    <input id="Text1" type="text" name="aabningtider"value="@Model.aabningtider"  placeholder="Åbningstider i butikken"/>
+    <input id="Submit1" type="submit" value="submit"/>
+
+</form>

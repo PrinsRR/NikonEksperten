@@ -27,7 +27,7 @@ namespace NikonEksperten.Areas.Admin.Controllers
         public ActionResult Index(HttpPostedFileBase billede, Omos O, string oldpic)
         {
 
-       
+            if(ModelState.IsValid) {
 
                 if (billede != null)
                 {
@@ -43,7 +43,7 @@ namespace NikonEksperten.Areas.Admin.Controllers
 
                 fomos.Update(O);
 
-
+ }
            
 
         
