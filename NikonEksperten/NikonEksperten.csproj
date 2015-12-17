@@ -157,7 +157,6 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CMSController.cs" />
     <Compile Include="Areas\Admin\Controllers\CMSProController.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\KontaktController.cs" />
     <Compile Include="Areas\Admin\Controllers\OmosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
