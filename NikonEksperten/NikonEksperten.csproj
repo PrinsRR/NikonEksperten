@@ -150,9 +150,6 @@
     </Content>
     <Content Include="content\styles\SlideStyles.css" />
     <Content Include="Global.asax" />
-    <Content Include="obj\Debug\NikonEksperten.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\NikonEksperten.dll" />
-    <Content Include="obj\Debug\NikonEksperten.pdb" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -204,12 +201,13 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
     <Content Include="content\Foundation\foundation.css.map" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\NikonEksperten.csprojResolveAssemblyReference.cache" />
     <Content Include="Views\Shared\Slider.cshtml" />
     <Content Include="Views\Home\Kategorier.cshtml" />
     <Content Include="Views\Shared\SoegeBox.cshtml" />
     <Content Include="Views\Home\SoegeResultater.cshtml" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Views\Home\Produkter.cshtml" />
+    <Content Include="Views\Home\Produkt.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -221,7 +219,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="content\Images\OmosBilleder\" />
     <Folder Include="content\Images\ProduktBilleder\" />
-    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NikonRepo\NikonRepo.csproj">
