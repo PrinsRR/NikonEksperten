@@ -124,6 +124,27 @@
     <Content Include="content\Images\KategoriBilleder\Tilbud.gif" />
     <Content Include="content\Images\KategoriBilleder\untitled.png" />
     <Content Include="content\Images\KategoriBilleder\untitled3.png" />
+    <Content Include="content\Images\OmosBilleder\Butik.jpg" />
+    <Content Include="content\Images\ProduktBilleder\CF16.jpg" />
+    <Content Include="content\Images\ProduktBilleder\CF64.jpg" />
+    <Content Include="content\Images\ProduktBilleder\CoolPix110.jpg" />
+    <Content Include="content\Images\ProduktBilleder\CoolPixS01.jpg" />
+    <Content Include="content\Images\ProduktBilleder\CoolPixS800C.jpg" />
+    <Content Include="content\Images\ProduktBilleder\D3200.jpg" />
+    <Content Include="content\Images\ProduktBilleder\D600.jpg" />
+    <Content Include="content\Images\ProduktBilleder\D7100.jpg" />
+    <Content Include="content\Images\ProduktBilleder\Manfrotto701.jpg" />
+    <Content Include="content\Images\ProduktBilleder\MSD16.jpg" />
+    <Content Include="content\Images\ProduktBilleder\MSD32.jpg" />
+    <Content Include="content\Images\ProduktBilleder\MSD64.jpg" />
+    <Content Include="content\Images\ProduktBilleder\MSD8.jpg" />
+    <Content Include="content\Images\ProduktBilleder\Nikon1.jpg" />
+    <Content Include="content\Images\ProduktBilleder\Nikon200f4.jpg" />
+    <Content Include="content\Images\ProduktBilleder\R1C1.jpg" />
+    <Content Include="content\Images\ProduktBilleder\SB700.jpg" />
+    <Content Include="content\Images\ProduktBilleder\SD16GB.jpg" />
+    <Content Include="content\Images\ProduktBilleder\SD32GB.jpg" />
+    <Content Include="content\Images\ProduktBilleder\SP24-70.jpg" />
     <Content Include="content\Images\SliderBilleder\Banner01.jpg" />
     <Content Include="content\Images\SliderBilleder\Banner02.jpg" />
     <Content Include="content\Images\SliderBilleder\Banner03.jpg" />
@@ -163,6 +184,7 @@
     <Compile Include="Areas\Admin\Controllers\KontaktController.cs" />
     <Compile Include="Areas\Admin\Controllers\OmosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OmController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +232,7 @@
     <Content Include="Views\Home\Kategorier.cshtml" />
     <Content Include="Views\Shared\SoegeBox.cshtml" />
     <Content Include="Views\Home\SoegeResultater.cshtml" />
+    <Content Include="Views\Om\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -219,8 +242,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="content\Images\OmosBilleder\" />
-    <Folder Include="content\Images\ProduktBilleder\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>

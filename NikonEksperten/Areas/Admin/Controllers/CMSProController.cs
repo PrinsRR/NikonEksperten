@@ -16,8 +16,8 @@ namespace NikonEksperten.Areas.Admin.Controllers
         // GET: Admin/CMSPro
         public ActionResult Index()
         {
-           
-            return View( Fpro.GetAll());
+            
+            return View(Fpro.GetAll());
         }
 
 

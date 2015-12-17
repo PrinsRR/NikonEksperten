@@ -9,11 +9,20 @@
 
 <form action="/Admin/CMS/Addkat/" enctype="multipart/form-data" method="POST">
 
+    <table>
+        <tr><td colspan="2"><input id="Navn" name="KategoriNavn" type="text" placeholder="Kategori navn" />
+        <tr>
+            <td colspan="2">
+                <input id="Tekst" name="Tekst" type="text" placeholder="Tekst" />
 
-    <input id="Navn" name="KategoriNavn" type="text"  placeholder="Kategori navn"/>
-    <input id="Tekst" name="Tekst" type="text" placeholder="Tekst"/>
-    <input id="File1" type="file" name="billede" />
-    
-    <input id="Submit1" type="submit" value="submit" />
+        <tr>
+            <td colspan="2">
+                <input id="File1" type="file" name="billede" />
+            </td>
+        </tr>
 
+        <tr><td><input id="AddkatKnap" type="submit" value="Opret"/></td>
+        <td></td></tr>
+
+    </table>
 </form>

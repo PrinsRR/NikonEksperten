@@ -58,3 +58,23 @@ nav ul li a {
 i {
   color: black; }
 
+#AddkatKnap {
+  height: 35px !important;
+  width: 100% !important; }
+
+table {
+  margin-left: 50px;
+  margin-bottom: 50px; }
+
+table th {
+  text-align: left; }
+
+h2 {
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.katTable {
+  width: 80% !important;
+  margin-left: 50px; }
+
