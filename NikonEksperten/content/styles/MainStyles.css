@@ -144,11 +144,30 @@
   line-height: 2; }
 
 .headerkon {
-  height: 40px;
+  height: 40px !important;
   background-color: lightgray;
-  color: white;
   text-align: center; }
 
 h6 {
-  line-height: 40px; }
+  line-height: 40px !important; }
+
+.pkontakt {
+  margin: 0;
+  padding: 0;
+  padding-left: 10px; }
+
+.Border {
+  border: 1px solid #D8D8D8; }
+
+.kaTable {
+  width: 90% !important;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.padleft {
+  margin-left: 20px !important; }
+
+h2 {
+  margin: 20px; }
 

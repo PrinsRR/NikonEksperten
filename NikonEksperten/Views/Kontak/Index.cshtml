@@ -9,20 +9,20 @@
 
 <div class="row">
 
-    <div class="medium-3 small-12 columns">
-        <div class="left">
+    <div class="medium-3 small-12 columns ">
+        <div class="Border padleft">
             <div class="headerkon">
                 <h6>Vores adresse</h6>
             </div>
-            <p>@Model.ButiksNavn</p>
-            <p>@Model.Adresse</p>
-            <p>@Model.Postnr @Model.Bynavn</p><br/><br/>
+            <p class="pkontakt">@Model.ButiksNavn</p>
+            <p class="pkontakt">@Model.Adresse</p>
+            <p class="pkontakt">@Model.Postnr @Model.Bynavn</p><br/>
 
-            <p>@Model.telefon</p>
-            <p>@Model.fax</p><br/><br/>
+            <p class="pkontakt">@Model.telefon</p>
+            <p class="pkontakt">@Model.fax</p><br/>
 
-            <p>@Model.mail</p>
-            <p>@Model.website</p><br/>
+            <p class="pkontakt">@Model.mail</p>
+            <p class="pkontakt">@Model.website</p>
 
 
 
@@ -31,17 +31,43 @@
         </div>
     </div>
     <div class="medium-4 small-12 columns">
-        <div class="midten">
+        <div class="Border">
             <div class="headerkon">
                 <h6>Åbninstider</h6>
             </div>
+            <p class="pkontakt">@Model.aabningtider</p>
         </div>
     </div>
     <div class="medium-5 small-12 columns">
-        <div class="right">
+        <div class="Border">
             <div class="headerkon">
                 <h6>Send os en mail</h6>
             </div>
+            <table class="kaTable">
+                <tr>
+                    <td>Navn :</td>
+                    <td><input id="Text1" type="text" placeholder="Navn"/></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><input id="Text1" type="text" placeholder="Email"/></td>
+                </tr>
+                <tr>
+                    <td>Emne :</td>
+                    <td><input id="Text1" type="text" placeholder="Emne"/></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <textarea placeholder="Skriv din besked her"></textarea>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><input id="Submit1" type="submit" value="submit" /></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
     </div>
 
