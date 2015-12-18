@@ -43,4 +43,101 @@ h2 {margin-left:$tableMar; margin-top:20px; margin-bottom:20px;}
 
 .katTable {width:80%!important; margin-left:$tableMar;}
 
+.slidecontain {
+    height:100%;
+    position:relative;
+}
+.slideadd {
+    width:900px;
+    height:250px !important;
+}
+.slideadd:hover {
+    cursor:pointer;
+}
 
+.slideadd:hover i {
+    color:#40d47e;
+}
+
+.slideadd:hover span {
+    transition:all 0.6s;
+    color:#333;
+}
+.slideadd span {
+    transition:color 0.6s;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-size:5.5em;
+    font-family:Arial;
+    color:#666;
+}
+.slidecontain:hover i {
+    opacity:1;
+    transition:0.6s all;
+}
+
+.styleoption {
+    position:absolute;
+    height:100%;
+    width:900px;
+    
+}
+.styleoption i, .slideadd i {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transition:0.6s all;
+    opacity:0;
+    color:rgb(70,70,70);
+    font-size:7em;
+}
+.slideadd i {
+    transition:all 0.6s;
+    left:20% !important;
+    color:#27ae60;
+    opacity: 1 !important;
+    
+}
+.slideedit, .slideremove {
+    height:100%;
+    width:450px;
+    position:absolute;
+    transition:0.6s all;
+    background-color:rgba(55,55,55,0.5);
+    top:0;
+    
+    text-align:center;
+}
+.slideedit {
+    left:0;
+    cursor:pointer;
+}
+.slideremove {
+    right:0;
+}
+
+.slideedit:hover, .slideremove:hover {
+    transition:0.6s all;
+    background-color:rgba(22,22,22,0.5)
+}
+.slideedit:hover i {
+    transition: all 0.5s;
+    color:#2980b9;
+}
+.slideremove:hover i {
+    transition: all 0.5s;
+    color:#c0392b;
+}
+.uploadslide {
+    visibility:hidden;
+    height:0;
+    margin:0;
+    padding:0; 
+}
+#formaddslide {
+    width:900px;
+    height:250px;
+}

@@ -64,6 +64,7 @@
     background-color: rgba(255, 255, 255, 0.9);
     height: 15px;
     width: 15px;
+    margin: 2px;
     border-radius: 15px;
     display: inline-block;
 }
@@ -85,7 +86,6 @@
 .slide {
     display: inline-block;
         position: relative;
-    margin-right: -4px;
     background-position: center !important;
     background-size: 100% !important;
     height: 300px;
