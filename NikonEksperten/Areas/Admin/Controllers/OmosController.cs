@@ -8,6 +8,7 @@ using NikonRepo.Factories;
 
 namespace NikonEksperten.Areas.Admin.Controllers
 {
+    [Authorize]
     public class OmosController : Controller
     {
         facOmos fomos = new facOmos();

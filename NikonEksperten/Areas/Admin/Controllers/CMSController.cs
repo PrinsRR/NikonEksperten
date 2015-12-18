@@ -9,6 +9,7 @@ using NikonRepo.Factories;
 
 namespace NikonEksperten.Areas.Admin.Controllers
 {
+    [Authorize]
     public class CMSController : Controller
     {
         private facSlider fslider = new facSlider();

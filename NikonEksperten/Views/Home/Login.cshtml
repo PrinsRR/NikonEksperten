@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Login</h2>
+
+<form name="myForm" action="/Home/Login/" enctype="multipart/form-data" method="POST">
+    <input type="text" id="Username" name="Email" placeholder="Username/Email" />
+    @ViewBag.UserError
+    <br />
+    <input type="password" id="Password" name="Password" placeholder="Password" />
+    @ViewBag.PasswordError
+    <br />
+    <input type="submit" id="Submit1" value="Login" />
+    @ViewBag.LoginError
+</form>

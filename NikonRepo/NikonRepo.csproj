@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,11 +46,13 @@
     <Compile Include="Duser\Conn.cs" />
     <Compile Include="Duser\Mapper.cs" />
     <Compile Include="Duser\PasswordProtector.cs" />
+    <Compile Include="Factories\facBruger.cs" />
     <Compile Include="Factories\facSlider.cs" />
     <Compile Include="Factories\facKategori.cs" />
     <Compile Include="Factories\facKontakt.cs" />
     <Compile Include="Factories\facOmos.cs" />
     <Compile Include="Factories\facProdukter.cs" />
+    <Compile Include="Models\BaseModels\Bruger.cs" />
     <Compile Include="Models\BaseModels\Slider.cs" />
     <Compile Include="Models\BaseModels\Produkter.cs" />
     <Compile Include="Models\BaseModels\Omos.cs" />

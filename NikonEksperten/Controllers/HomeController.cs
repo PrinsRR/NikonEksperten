@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using NikonRepo;
 using NikonRepo.Factories;
 
@@ -17,12 +18,10 @@ namespace NikonEksperten.Controllers
         {
             return View(fkat.GetForsideProdukter());
         }
-
         public ActionResult Kategorier()
         {
             return View(fkat.GetAll());
         }
-
         public ActionResult SoegeResultater()
         {
             var list = TempData["list"] as List<Produkter>;
@@ -46,7 +45,6 @@ namespace NikonEksperten.Controllers
             }
             return RedirectToAction("Index");
         }
-
         public ActionResult Produkter(int id = 0)
         {
             if (id != 0)
@@ -69,5 +67,36 @@ namespace NikonEksperten.Controllers
 
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(string Email, string Password)
+        {
+            if (ModelState.IsValid)
+            {
+                facBruger bf = new facBruger();
+
+                Bruger bruger = bf.Login(Email, Password);
+
+                if (bruger.ID > 0)
+                {
+                    FormsAuthentication.SetAuthCookie(bruger.ID.ToString(), false);
+                    Session["UserID"] = bruger.ID;
+                    Session.Timeout = 120;
+                    @ViewBag.Loggedin = "Velkommen " + bruger.Email;
+                    return RedirectToAction("Index", "CMS", new { area = "Admin" });
+                }
+                else
+                {
+                    
+                    @ViewBag.Loggedin = "Fejl i login";
+                    return RedirectToAction("Login");
+                }
+                
+            }
+            return RedirectToAction("Login");
+        }
     }
 }
