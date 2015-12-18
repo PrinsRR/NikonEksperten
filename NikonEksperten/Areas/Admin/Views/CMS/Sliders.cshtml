@@ -1,0 +1,49 @@
+﻿@using NikonRepo
+@model List<NikonRepo.Slider>
+
+@{
+    ViewBag.Title = "Sliders";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Slider</h2>
+@ViewBag.UploadError
+<table>
+    <tr>
+        <td class="slidecontain">
+            <form  name="formaddslide" action="/Admin/CMS/AddSlide/" enctype="multipart/form-data" method="POST" id="formaddslide">
+                <input id="AddSlide" name="slidepic" type="file" class="uploadslide" onchange="addslidesubmit()" />
+            <label for="AddSlide" class="styleoption slideadd">
+                    <i class="fa fa-plus"></i><span>Add Slide</span>
+            </label>
+                </form>
+
+</td>
+    </tr>
+
+    @{
+        string id = "0";
+        string formid = string.Empty;
+    }
+    @foreach (Slider slid in @Model)
+    {
+
+        {
+            id = "f0" + slid.ID;
+            formid = "form" + slid.ID;
+        }
+        <tr>
+            <td class="slidecontain">
+                <div class="styleoption">
+                    <form enctype="multipart/form-data" id="@formid">
+                        <input id="@id" name="pic" type="file" class="uploadslide" onchange="uploadslide('@id', '@slid.ID')" placeholder="Add profile picture"/>
+                        <label for="@id" class="slideedit"><i class="fa fa-pencil-square-o"></i></label>
+                        <a href="" class="slideremove" onclick="removeeslide('@id', '@slid.ID')"><i class="fa fa-trash"></i></a>
+                    </form>
+                </div>
+                <img style="width: 900px;" src="~/content/Images/SliderBilleder/@slid.Img"/>
+            </td>
+        </tr>
+    }
+
+</table>

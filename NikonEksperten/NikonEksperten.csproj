@@ -218,6 +218,7 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="Areas\Admin\Views\Omos\AddIndhold.cshtml" />
     <Content Include="Areas\Admin\Views\Kontakt\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CMS\Sliders.cshtml" />
     <None Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
